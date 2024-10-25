@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-secondary">
+    <div class="contador bg-info p-4 shadow-lg">
+        <div id="contador-display" class="contador-display bg-dark text-white mx-auto mb-3">
+            <span id="segundos">00:00</span>
+            <p class="fs-5">Min - Seg</p>
+        </div>
+
+        <div class="mb-3">
+            <input type="number" id="entrada-segundos" class="form-control" placeholder="Ingresa minutos" min="1">
+        </div>
+
+        <div class="d-flex justify-content-around mb-3">
+            <button id="btnEmpezar" class="btn btn-success">Empezar</button>
+            <button id="btnCancelar" class="btn btn-danger">Cancelar</button>
+        </div>
+    </div>
+
+<!-- Contenedor para el efecto de confeti -->
+<div id="confetti-container"></div>
+
+<!-- Modal al finalizar el tiempo -->
+<div class="modal fade" id="modalTermino" tabindex="-1" aria-labelledby="timeUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="timeUpModalLabel">¡Tiempo terminado!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        ¡Se acabó el tiempo!
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal de Validación de Entrada -->
+    <div class="modal fade" id="modalValida" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="validationModalLabel">Entrada no válida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Por favor, ingresa valor en minutos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/logica.js"></script>
+</body>
+</html>

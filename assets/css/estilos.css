@@ -1,0 +1,23 @@
+/* Contenedor del temporizador */
+.contador {
+    width: 350px;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra alrededor */
+    background-color: #b3e5fc; /* Fondo celeste */
+}
+
+/* Estilo del temporizador */
+.contador-display {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 5rem;
+}
+
+.modal-backdrop {
+    display: none;
+  }
